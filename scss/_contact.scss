@@ -1,0 +1,154 @@
+@use "mixin" as m;
+
+.hero-contact{
+    padding-top: 40px;
+
+    @include m.responsive(1200){
+        padding-top: 100px;
+    }
+
+    ul{
+
+        li{
+            font-size: 15px;
+            display: flex;
+            margin-bottom: 19px;
+
+            .bi-check-lg{
+                color: #5f30e2;
+                margin-right: 11px;
+            }
+        }
+    }
+
+    .step{
+        
+        .num{
+            background: #5f30e2;
+        }
+        
+        span{
+            font-size: 15px;
+        }
+    }
+}
+
+.form-check-input:checked[type=radio] {
+    background: rgb(216,215,42);
+}
+
+.form-check-input:checked {
+    background-color: #000000;
+    border-color: #CAE5A7;
+}  
+
+.ind{
+
+    a{
+        border: 2px solid #5f30e2;
+        padding:6px 35px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #5f30e2;
+        border-radius: 12px;
+
+        &:hover{
+            background: #5f30e2;
+            color: #fff;
+        }
+      }
+}
+
+.bew{
+
+    &-main{
+        
+        h4{
+           font-weight: 800;
+           font-size: 15px; 
+        }
+    }
+
+    &-label{
+        
+        input{
+            display: none;
+        }
+        margin-bottom: 10px;
+    }
+
+    &-span{
+        width: 15px;
+        height: 15px;
+        border: 1px solid #666;
+        border-radius: 3px;
+        text-align: center;
+        margin-bottom: 3px;
+        margin-right: 10px;
+        
+
+        i{
+            color: rgb(255, 255, 255);
+            font-size: 0px;
+        }
+    }
+
+    &-text{
+        font-size: 13px;
+        color: #000;
+    }
+}
+
+.bew-content input:checked + span{
+    background: #005aff;
+    border: 1px solid #005aff;
+    line-height: 9px;
+
+    i{
+        font-size: 8px;
+    }
+}
+
+.pselectOpen{
+    font-size: 13px;
+    margin-bottom: 12px;
+    cursor: pointer;
+
+    &::after{
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0.4em 0.4em 0 0.4em;
+        border-color: #999 transparent transparent transparent;
+        margin-left: auto;
+        vertical-align: 0.1em;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.pselect-main{
+
+    .pselect{
+        display: none;
+    }
+
+    &.active{
+        .pselectOpen{
+
+            &::after{
+                border-width: 0 0.4em 0.4em 0.4em;
+                border-color: transparent transparent #999 transparent;
+            }
+        }
+
+        .pselect{
+            display: block;
+        }
+    }
+
+}

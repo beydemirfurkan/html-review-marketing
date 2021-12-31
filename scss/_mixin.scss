@@ -1,0 +1,31 @@
+@mixin responsive($val, $val2 : null){
+
+    @if ($val == 768) {
+      @media (min-width:768px){  @content  }
+    };
+  
+    @if ($val == 992) {
+      @media (min-width:992px){  @content  }
+    };
+  
+    @if ($val == 1200) {
+      @media (min-width:1200px){  @content  }
+    }; 
+  
+    @if ($val == 1500) {
+      @media (min-width:1500px){  @content  }
+    }; 
+  
+    @if ($val == 1900) {
+      @media (min-width:1900px){  @content  }
+    } 
+  };
+  
+  @mixin zindex($val) {
+    z-index: $val;
+  }
+  
+  @mixin objFit() {
+    object-fit: cover;
+    object-position: center;
+  }
